@@ -1,7 +1,19 @@
+# Python
 venv/
 __pycache__/
 *.py[cod]
-.env
-.DS_Store
-.streamlit/
 *.pyc
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Streamlit
+.streamlit/
