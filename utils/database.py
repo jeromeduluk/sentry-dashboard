@@ -19,7 +19,8 @@ def get_db_engine():
     db_password = os.getenv('DB_PASSWORD')
     db_port = os.getenv('DB_PORT', '5432')
     
-    connection_string = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+    # Force IPv4 connection
+    connection_string = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}?options=-c%20address_family=ipv4"
     engine = create_engine(connection_string)
     return engine
 
